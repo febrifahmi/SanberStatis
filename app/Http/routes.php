@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/','HomeController@show');
+
+Route::get('/laravel', function () {
     return view('welcome');
 });
+
+Route::post('/welcome', function(){
+	return view('welcome2');
+});
+
+Route::get('/register', 'AuthController@show');
