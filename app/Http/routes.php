@@ -11,7 +11,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/','HomeController@show');
+Route::get('/home','HomeController@show');
 
 Route::get('/laravel', function () {
     return view('welcome');
@@ -22,3 +22,7 @@ Route::post('/welcome', function(){
 });
 
 Route::get('/register', 'AuthController@show');
+
+Route::get('/', 'RootController@index');
+
+Route::get('/data-tables', 'DatatabController@show');
