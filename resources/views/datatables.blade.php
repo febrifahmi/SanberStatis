@@ -1,6 +1,15 @@
 @extends('master')
 @section('content')
-@stack('scripts')
+@push('scripts')
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    <style type="text/css" src="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"></style>
+    <script>
+      $(function () {
+        $("#example1").DataTable();
+      });
+    </script>
+@endpush
 <div class="card">
       <div class="card-header">
         <h3 class="card-title">DataTable with default features</h3>
@@ -439,16 +448,5 @@
       </div>
       <!-- /.card-body -->
     </div>
-
-@push('scripts')
-    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
-    <style type="text/css" src="cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"></style>
-    <script>
-      $(function () {
-        $("#example1").DataTable();
-      });
-    </script>
-@endpush
 
 @endsection
