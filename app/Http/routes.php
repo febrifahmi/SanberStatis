@@ -26,3 +26,20 @@ Route::get('/register', 'AuthController@show');
 Route::get('/', 'RootController@index');
 
 Route::get('/data-tables', 'DatatabController@show');
+
+// Route untuk masing-masing Method Pertanyaan-pertanyaan
+
+Route::get('/pertanyaan', 'PertanyaanController@index');
+
+Route::get('/pertanyaan/create', 'PertanyaanController@create');
+
+Route::post('/pertanyaan/store', 'PertanyaanController@store');
+
+Route::post('/pertanyaan/show', 'PertanyaanController@show');
+
+Route::post('/pertanyaan/edit', 'PertanyaanController@edit');
+
+Route::post('/pertanyaan/update', 'PertanyaanController@update');
+
+Route::post('/pertanyaan/destroy', 'PertanyaanController@destroy');
+
